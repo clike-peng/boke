@@ -1,0 +1,113 @@
+:root {
+  --fg: #1d1f21;
+  --muted: #6b7280;
+  --accent: #2f7d4f;
+  --line: #e5e7eb;
+  --bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e6e6e6;
+    --muted: #9aa0a6;
+    --accent: #6cc48c;
+    --line: #2c2f33;
+    --bg: #16181c;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.75 -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.site-header,
+main,
+.site-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  color: var(--fg);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+main { padding-top: 32px; padding-bottom: 48px; }
+
+h1 { font-size: 1.65rem; line-height: 1.35; margin: 0 0 12px; }
+h2.section-title { font-size: 1rem; color: var(--muted); font-weight: 500; margin: 32px 0 8px; }
+.lead { color: var(--muted); margin-top: 0; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.meta { color: var(--muted); font-size: 0.875rem; margin-bottom: 20px; }
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.tags li a {
+  display: inline-block;
+  padding: 2px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.content { border-top: 1px solid var(--line); padding-top: 24px; }
+.content h2 { font-size: 1.25rem; margin-top: 32px; }
+.content img { max-width: 100%; height: auto; }
+.content pre {
+  background: rgba(127, 127, 127, 0.12);
+  padding: 14px 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.content code { font-size: 0.9em; }
+.content blockquote {
+  margin: 20px 0;
+  padding-left: 16px;
+  border-left: 3px solid var(--line);
+  color: var(--muted);
+}
+
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.post-list time { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+.post-list .empty { color: var(--muted); }
+
+.site-footer {
+  padding-bottom: 40px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>{{ .Site.Title }}</h1>
+{{ with .Site.Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+<h2 class="section-title">最近文章</h2>
+<ul class="post-list">
+  {{ range first 20 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <time>{{ .Date.Format "2006-01-02" }}</time>
+  </li>
+  {{ else }}
+  <li class="empty">还没有文章。</li>
+  {{ end }}
+</ul>
+{{ end }}
