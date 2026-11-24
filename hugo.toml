@@ -1,7 +1,6 @@
 baseURL = "https://clike-peng.github.io/boke/"
 languageCode = "zh-cn"
 title = "王先生的博客"
-theme = ""
 
 [params]
   author = "clike-peng"
