@@ -1,6 +1,6 @@
 ---
 title: "开张：博客上线"
-date: 2026-11-24T16:30:00+08:00
+date: 2026-11-24T15:00:00+08:00
 tags: ["Hugo", "GitHub Pages", "博客"]
 author: "clike-peng"
 ---
